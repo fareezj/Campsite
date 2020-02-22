@@ -16,7 +16,10 @@ var express 		= require("express"),
 
 	
 //seedDB();
-mongoose.connect("mongodb://localhost/yelp-camp");
+//mongoose.connect("mongodb://localhost/yelp-camp");
+mongoose.connect("mongodb+srv://Fareez:123@yelpcamp-meupg.mongodb.net/test?retryWrites=true&w=majority");
+
+//mongodb+srv://Fareez:123@yelpcamp-meupg.mongodb.net/test?retryWrites=true&w=majority
 app.use(bodyParser.urlencoded({extended:true}));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
