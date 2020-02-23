@@ -14,10 +14,12 @@ var express 		= require("express"),
 	flash			= require("connect-flash"),
 	app = express();
 
-console.log(process.env.DATABASEURL);
 	
 //seedDB();
-mongoose.connect(process.env.DATABASEURL);
+
+var url = process.env.DATABASEURL || "mongodb://localhost/yelp-camp"
+
+mongoose.connect(url);
 //mongoose.connect("mongodb+srv://Fareez:123@yelpcamp-meupg.mongodb.net/test?retryWrites=true&w=majority");
 
 //mongodb+srv://Fareez:123@yelpcamp-meupg.mongodb.net/test?retryWrites=true&w=majority
